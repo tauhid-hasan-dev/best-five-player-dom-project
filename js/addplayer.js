@@ -2,7 +2,7 @@
 const btnSelectPlayer = document.getElementsByClassName('btn-select-player');
 
 for (let button of btnSelectPlayer) {
-    button.addEventListener('click', (e) => {
+    button.addEventListener('click', function (e) {
         updatePlayerList(e);
     });
 };

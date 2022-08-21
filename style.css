@@ -13,6 +13,23 @@ header {
     background-color: rgb(59, 5, 91) !important;
 }
 
+.best-players {
+    height: 347px !important;
+}
+
+ol {
+    word-break: break-all;
+}
+
 .players {
     padding: 10px 0;
+    text-align: start;
+    margin-left: 5px;
+    list-style-position: inside;
+}
+
+.players::before {
+    content: "";
+    width: 20px;
+    display: inline-block;
 }
