@@ -8,3 +8,7 @@ header {
     background: rgb(2, 0, 36);
     background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(52, 6, 79, 1) 37%, rgba(128, 58, 170, 1) 100%);
 }
+
+.card {
+    background-color: rgb(44, 3, 67) !important;
+}

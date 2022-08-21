@@ -4,14 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Find
-        The Best Win The Rest</title>
+    <title>FindThe Best Win The Rest</title>
+    <!-- custom css link -->
     <link rel="stylesheet" href="style.css">
+    <!-- bootstrap css link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- header section -->
     <header class="p-5">
         <section class="container-fluid text-center text-white p-5 w-50 ">
             <div class="row my-5">
@@ -19,21 +21,104 @@
                     The Best Win The Rest</p>
                 <p>Select the players will win the war for you. Don't let your fans to be demotivated and loose hope.
                     Find
-                    the best win the rest</p>
+                    the best win the rest.</p>
             </div>
         </section>
     </header>
+    <!-- main body with players and side bars section -->
     <main class="container">
-        <section>
+        <section class="py-5">
             <div class="row">
-                <div class="col-9">
+                <!-- player section-->
+                <div class="col-9 ">
+                    <div class="row row-cols-1 row-cols-md-3 g-4 text-white">
+                        <div class="col">
+                            <div class="card h-100 ">
+                                <img src="images/messi.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="card-title fs-5 fw-bolder">Lionel Messi</p>
+                                    <p class="card-text">50 goals . 100 Assist</p>
+                                    <div class="d-grid gap-2 ">
+                                        <button class="btn btn-primary " type="button">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="images/neimer.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="card-title fs-5 fw-bolder">Neymar Jr</p>
+                                    <p class="card-text">42 goals . 56 Assist</p>
+                                    <div class="d-grid gap-2 ">
+                                        <button class="btn btn-primary " type="button">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="images/mbappe.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="card-title fs-5 fw-bolder">Kylian Mbappé</p>
+                                    <p class="card-text">36 goals . 89 Assist</p>
+                                    <div class="d-grid gap-2 ">
+                                        <button class="btn btn-primary " type="button">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="images/vitor.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="card-title fs-5 fw-bolder">Vítor Machado</p>
+                                    <p class="card-text">30 goals . 78 Assist</p>
+                                    <div class="d-grid gap-2 ">
+                                        <button class="btn btn-primary " type="button">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="images/ramos.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="card-title fs-5 fw-bolder">Sergio Ramos</p>
+                                    <p class="card-text">50 Save . 5 Assist</p>
+                                    <div class="d-grid gap-2 ">
+                                        <button class="btn btn-primary " type="button">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <img src="images/renato.png" class="card-img-top" alt="...">
+                                <div class="card-body text-center">
+                                    <p class="card-title fs-5 fw-bolder">Renato Sanches</p>
+                                    <p class="card-text">25 goals . 36 Assist</p>
+                                    <div class="d-grid gap-2 ">
+                                        <button class="btn btn-primary " type="button">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
+                    </div>
                 </div>
+                <!-- side bar section (selected player and salary calculation) -->
                 <div class="col-3">
-                     
-                </div>
-            </div>
+                    <div class="row">
+                        <h1 class="bg-info text-white">Selected Players sections</h1>
+                    </div>
+                    <div class="row">
+                        <h1 class="bg-info text-white">This is calculation section</h1>
+                    </div>
 
+                </div>
+
+            </div>
         </section>
     </main>
     <script src="script.js"></script>
