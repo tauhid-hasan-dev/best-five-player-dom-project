@@ -10,5 +10,9 @@ header {
 }
 
 .card {
-    background-color: rgb(44, 3, 67) !important;
+    background-color: rgb(59, 5, 91) !important;
+}
+
+.players {
+    padding: 10px 0;
 }
