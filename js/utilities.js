@@ -1,4 +1,4 @@
-//function for dynamic selecting the the player name and append it to the player list
+//function for selecting players name  dynamically and append it to the player list
 const playerList = document.getElementById('player-list');
 function updatePlayerList(e) {
     //error handling - if player number is equals to 5 code, will not execute to the next line.
@@ -19,4 +19,19 @@ function updatePlayerList(e) {
     //append the player name to the player list.
     playerList.appendChild(playerListChild);
 
+    //button disabled after appending the player name
+    const buttonSelect = e.target;
+    buttonSelect.classList.add('bg-secondary');
+    buttonSelect.setAttribute("disabled", true);
+}
+
+
+//function for calculating the player expenses
+function calculatePlayerExpenses() {
+    const perPlayerIuputElem = document.getElementById('input-per-player-cost');
+    const playerExpenseTotalElem = document.getElementById('player-expense-total');
+    const playerNumber = playerList.children.length;
+    const perPlayerCost = parseFloat(perPlayerIuputElem.value);
+    const playerExpensesTotal = perPlayerCost * playerNumber;
+    playerExpenseTotalElem.innerText = playerExpensesTotal;
 }
