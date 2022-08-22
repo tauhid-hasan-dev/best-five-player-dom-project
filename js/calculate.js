@@ -25,7 +25,14 @@ btnCalculateTotalElem.addEventListener('click', function () {
     const coachCost = parseFloat(coachInputElem.value);
 
     if (isNaN(managerCost) || isNaN(coachCost)) {
+        managerInputElem.value = '';
+        coachInputElem.value = '';
         alert('Please enter at least a number');
+        return;
+    }
+
+    if (managerCost < 0 || coachCost < 0) {
+        alert('Please enter positive numbers only');
         return;
     }
     const totalCost = playerExpense + managerCost + coachCost;

@@ -48,8 +48,7 @@ function calculatePlayerExpenses() {
         return;
     }
     if (perPlayerCost <= 0) {
-        perPlayerIuputElem.value = '';
-        alert('Please enter a positive number');
+        alert('Please enter positive numbers only');
         return;
     }
     const playerExpensesTotal = perPlayerCost * playerNumber;
