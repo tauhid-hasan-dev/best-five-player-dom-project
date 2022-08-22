@@ -14,7 +14,9 @@ function updatePlayerList(e) {
 
     //create a li element to be added to the player list.
     const playerListChild = document.createElement('li');
-    playerListChild.classList.add('players')
+    playerListChild.classList.add('players');
+    playerListChild.classList.add('fw-light');
+
     playerListChild.innerHTML = `${playerName}`;
 
     //append the player name to the player list.
