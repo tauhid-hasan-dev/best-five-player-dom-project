@@ -14,7 +14,7 @@ header {
 }
 
 .best-players {
-    height: 347px !important;
+    height: 387px !important;
 }
 
 ol {
@@ -32,7 +32,6 @@ ol {
     width: 15px;
     display: inline-block;
 }
-
 
 
 @media screen and (min-width: 360px) and (max-width: 576px) {
