@@ -24,12 +24,11 @@ ol {
 .players {
     padding: 10px 0;
     text-align: start;
-    margin-left: 5px;
     list-style-position: inside;
 }
 
 .players::before {
     content: "";
-    width: 20px;
+    width: 15px;
     display: inline-block;
 }
