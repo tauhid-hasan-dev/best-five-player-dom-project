@@ -24,34 +24,68 @@ function updatePlayerList(e) {
     const buttonSelect = e.target;
     buttonSelect.classList.add('btn-secondary');
     buttonSelect.setAttribute("disabled", true);
-    return playerList;
-
 }
 
 
 //function for calculating the player expenses
-
 const playerExpenseTotalElem = document.getElementById('player-expense-total');
 
 function calculatePlayerExpenses() {
     const perPlayerIuputElem = document.getElementById('input-per-player-cost');
     const playerExpenseTotalElem = document.getElementById('player-expense-total');
     const playerNumber = playerList.children.length;
+    //error handling - if player number is a negetive number
     if (playerNumber <= 0) {
         alert('Please select at least one player');
         return;
     }
     const perPlayerCost = parseFloat(perPlayerIuputElem.value);
+    //error handling - if per player cost is not a number
     if (isNaN(perPlayerCost)) {
         perPlayerIuputElem.value = '';
         alert('Please enter at least a number');
         return;
     }
+    //error handling - if per player cosnt is a negetive number
     if (perPlayerCost <= 0) {
         alert('Please enter positive numbers only');
         return;
     }
     const playerExpensesTotal = perPlayerCost * playerNumber;
     playerExpenseTotalElem.innerText = playerExpensesTotal;
-    return playerExpensesTotal;
+}
+
+//function for calculating total amout
+const btnCalculateTotalElem = document.getElementById('calculate-total');
+function calculateCost() {
+
+    const playerExpense = parseFloat(playerExpenseTotalElem.innerText);
+    //error handling - if player expenses is not a number or less than zero
+    if (isNaN(playerExpense) || playerExpense <= 0) {
+        alert('Please enter player expenses first');
+        return;
+    }
+    //total cost calculation
+    const managerInputElem = document.getElementById('input-manager-cost');
+    const coachInputElem = document.getElementById('input-coach-cost');
+    const totalCostElem = document.getElementById('total-cost');
+
+    //finding the manager and coach cost in number
+    const managerCost = parseFloat(managerInputElem.value);
+    const coachCost = parseFloat(coachInputElem.value);
+    //error handling - if manager cost and coarch cost is not a number
+    if (isNaN(managerCost) || isNaN(coachCost)) {
+        managerInputElem.value = '';
+        coachInputElem.value = '';
+        alert('Please enter at least a number');
+        return;
+    }
+    //error handling - if manager cost and coarch value is a negetive number
+    if (managerCost < 0 || coachCost < 0) {
+        alert('Please enter positive numbers only');
+        return;
+    }
+    //calculating the total cost
+    const totalCost = playerExpense + managerCost + coachCost;
+    totalCostElem.innerText = totalCost;
 }
